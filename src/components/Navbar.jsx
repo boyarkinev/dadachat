@@ -1,32 +1,33 @@
 import React from 'react';
+import classes from './Navbar.module.css';
 
 const Navbar = () => {
   return (
-    <nav className='nav'>
-      <ul className='nav__items'>
-        <li className='nav__item'>
+    <nav className={classes.nav}>
+      <ul className={classes.items}>
+        <li className={classes.item}>
           <a href='s1' className='app-link app-link_light'>
-            Profile
+            Профиль
           </a>
         </li>
-        <li className='nav__item'>
+        <li className={classes.item}>
           <a href='s1' className='app-link app-link_light'>
-            Messages
+            Сообщения
           </a>
         </li>
-        <li className='nav__item'>
+        <li className={classes.item}>
           <a href='s1' className='app-link app-link_light'>
-            News
+            Новости
           </a>
         </li>
-        <li className='nav__item'>
+        <li className={classes.item}>
           <a href='s1' className='app-link app-link_light'>
-            Music
+            Музыка
           </a>
         </li>
-        <li className='nav__item'>
+        <li className={classes.item}>
           <a href='s1' className='app-link app-link_light'>
-            Settings
+            Настройки
           </a>
         </li>
       </ul>

@@ -1,0 +1,21 @@
+.header {
+  grid-area: header;
+  background-color: #0099cc;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-family: 'Pacifico';
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
