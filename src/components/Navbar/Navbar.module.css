@@ -18,3 +18,8 @@
 .item:last-of-type {
   margin-bottom: 0;
 }
+
+.selector {
+  border-top: 1px solid rgba(255, 255, 255, .7);
+  border-bottom: transparent;
+}

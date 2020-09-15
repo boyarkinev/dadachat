@@ -39,3 +39,7 @@ code {
 .app-link:hover {
   opacity: .6;
 }
+
+.app-wrapper-content {
+  grid-area: content;
+}

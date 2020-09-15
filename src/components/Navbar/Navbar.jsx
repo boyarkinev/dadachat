@@ -12,7 +12,7 @@ const Navbar = () => {
         </li>
         <li className={classes.item}>
           <a href='s1' className='app-link app-link_light'>
-            Сообщения
+            Диалоги
           </a>
         </li>
         <li className={classes.item}>
@@ -25,6 +25,7 @@ const Navbar = () => {
             Музыка
           </a>
         </li>
+        <hr className={classes.selector}/>
         <li className={classes.item}>
           <a href='s1' className='app-link app-link_light'>
             Настройки
