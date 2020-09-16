@@ -4,6 +4,7 @@
   box-sizing: border-box;
   padding: 0 15px;
   color: #fff;
+  border-radius: 5px;
 }
 
 .items {
@@ -13,6 +14,10 @@
 
 .item {
   margin-bottom: 10px;
+}
+
+.item a.active {
+  color: #ffff99;
 }
 
 .item:last-of-type {

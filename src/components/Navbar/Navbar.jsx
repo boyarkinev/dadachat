@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import classes from './Navbar.module.css';
 
 const Navbar = () => {
@@ -6,30 +7,30 @@ const Navbar = () => {
     <nav className={classes.nav}>
       <ul className={classes.items}>
         <li className={classes.item}>
-          <a href='s1' className='app-link app-link_light'>
+          <NavLink to="/profile" className='app-link app-link_light' activeClassName={classes.active}>
             Профиль
-          </a>
+          </NavLink>
         </li>
         <li className={classes.item}>
-          <a href='s1' className='app-link app-link_light'>
+          <NavLink to="/dialogs" className='app-link app-link_light' activeClassName={classes.active}>
             Диалоги
-          </a>
+          </NavLink>
         </li>
         <li className={classes.item}>
-          <a href='s1' className='app-link app-link_light'>
+          <NavLink to="/news" className='app-link app-link_light' activeClassName={classes.active}>
             Новости
-          </a>
+          </NavLink>
         </li>
         <li className={classes.item}>
-          <a href='s1' className='app-link app-link_light'>
+          <NavLink to="/music" className='app-link app-link_light' activeClassName={classes.active}>
             Музыка
-          </a>
+          </NavLink>
         </li>
         <hr className={classes.selector}/>
         <li className={classes.item}>
-          <a href='s1' className='app-link app-link_light'>
+          <NavLink to="settings" className='app-link app-link_light' activeClassName={classes.active}>
             Настройки
-          </a>
+          </NavLink>
         </li>
       </ul>
     </nav>
