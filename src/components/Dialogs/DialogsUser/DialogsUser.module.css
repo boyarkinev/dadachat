@@ -1,0 +1,23 @@
+.user {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.user a {
+  color: inherit;
+  opacity: .6;
+  text-decoration: none;
+  transition: opacity .3s, color .3s;
+}
+
+.user a.active {
+  opacity: 1;
+  color: #0099cc;
+}
+
+.user a:hover {
+  opacity: 1;
+  color: #0099cc;
+}

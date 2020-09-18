@@ -1,38 +1,56 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Friends from '../Friends/Friends';
 import classes from './Navbar.module.css';
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className={classes.nav}>
       <ul className={classes.items}>
         <li className={classes.item}>
-          <NavLink to="/profile" className='app-link app-link_light' activeClassName={classes.active}>
+          <NavLink
+            to='/profile'
+            className='app-link app-link_light'
+            activeClassName={classes.active}>
             Профиль
           </NavLink>
         </li>
         <li className={classes.item}>
-          <NavLink to="/dialogs" className='app-link app-link_light' activeClassName={classes.active}>
+          <NavLink
+            to='/dialogs'
+            className='app-link app-link_light'
+            activeClassName={classes.active}>
             Диалоги
           </NavLink>
         </li>
         <li className={classes.item}>
-          <NavLink to="/news" className='app-link app-link_light' activeClassName={classes.active}>
+          <NavLink
+            to='/news'
+            className='app-link app-link_light'
+            activeClassName={classes.active}>
             Новости
           </NavLink>
         </li>
         <li className={classes.item}>
-          <NavLink to="/music" className='app-link app-link_light' activeClassName={classes.active}>
+          <NavLink
+            to='/music'
+            className='app-link app-link_light'
+            activeClassName={classes.active}>
             Музыка
           </NavLink>
         </li>
-        <hr className={classes.selector}/>
+        <hr className={classes.selector} />
         <li className={classes.item}>
-          <NavLink to="settings" className='app-link app-link_light' activeClassName={classes.active}>
+          <NavLink
+            to='settings'
+            className='app-link app-link_light'
+            activeClassName={classes.active}>
             Настройки
           </NavLink>
         </li>
+        <hr className={classes.selector} />
       </ul>
+      <Friends state={props.state} />
     </nav>
   );
 };

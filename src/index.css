@@ -25,6 +25,9 @@ code {
   max-width: 1280px;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .app-link {
@@ -42,4 +45,10 @@ code {
 
 .app-wrapper-content {
   grid-area: content;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }

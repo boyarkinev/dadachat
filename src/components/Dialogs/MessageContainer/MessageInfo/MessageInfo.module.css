@@ -1,0 +1,22 @@
+.user {
+  grid-area: user;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 20px;
+  color: #006699;
+  margin: 0;
+  background-color: lightblue;
+  border: 1px solid lightblue;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-sizing: border-box;
+  padding: 3px 5px 0 5px;
+  width: fit-content;
+}
+
+.date {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+  color: #fff;
+}

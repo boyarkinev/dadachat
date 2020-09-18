@@ -26,88 +26,35 @@
   padding: 5px 10px;
   margin: 0;
   list-style-type: none;
+  min-width: 200px;
 }
 
 .dialogsMessages {
   grid-area: dialogsMessages;
 }
 
-.dialogsMessages .user {
-  background-color: lightblue;
-  border: 1px solid lightblue;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  box-sizing: border-box;
-  padding: 0 5px;
-  width: fit-content;
-  line-height: 22px;
-  color: #006699;
-}
-
-.messageContainer {
+.formItems {
   display: grid;
   grid-template-columns: 50px auto;
-  grid-template-rows: auto auto;
-  grid-template-areas:
-  'avatar user'
-  'avatar message';
-  column-gap: 20px;
-  margin-bottom: 20px;
+  gap: 10px;
 }
 
-.messageContainer:last-of-type {
-  margin-bottom: 0;
+.formItems .attachment:hover {
+  opacity: .7;
 }
 
-.user {
-  grid-area: user;
-  font-size: 16px;
-  line-height: 28px;
-  font-weight: normal;
-  margin: 0;
-}
-
-.dialogsUsers a {
-  color: inherit;
-  opacity: .6;
-  text-decoration: none;
-  transition: opacity .3s, color .3s;
-}
-
-.dialogsUsers a.active {
-  opacity: 1;
-  color: #0099cc;
-}
-
-.dialogsUsers a:hover {
-  opacity: 1;
-  color: #0099cc;
-}
-
-.date {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: normal;
-  color: #fff;
-}
-
-.avatar {
-  grid-area: avatar;
+.attachment {
+  display: flex;
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-}
-
-.message {
-  grid-area: message;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: normal;
-  margin: 0;
-  color: inherit;
-  border: 1px solid lightblue;
+  margin: 0 auto;
+  align-items: center;
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='iso-8859-1'%3F%3E%3Csvg version='1.1' id='Capa_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 512 512' fill='%23999999'%3E%3Cpath d='M138.667,490.667H53.333C23.878,490.667,0,466.789,0,437.334V352c0.086-30.134,12.052-59.018,33.301-80.384L237.803,67.115 c4.093-4.237,10.845-4.355,15.083-0.262s4.355,10.845,0.262,15.083c-0.086,0.089-0.173,0.176-0.262,0.262L48.384,286.699 C31.122,304.056,21.402,327.521,21.333,352v85.333c0,17.673,14.327,32,32,32h85.333c24.507,0.068,48.021-9.673,65.301-27.051 l267.2-267.2c25.993-26.007,25.993-68.158,0-94.165l-18.752-18.752c-26.366-25.112-67.8-25.112-94.165,0L118.635,301.782 c-7.638,7.676-11.939,18.056-11.968,28.885v42.667c0,5.891,4.776,10.667,10.667,10.667H160c10.828-0.031,21.208-4.332,28.885-11.968 l176.917-176.917c4.093-4.237,10.845-4.355,15.083-0.262c4.237,4.093,4.354,10.845,0.262,15.083 c-0.086,0.089-0.173,0.176-0.262,0.262L203.968,387.115c-11.685,11.625-27.485,18.172-43.968,18.219h-42.667 c-17.673,0-32-14.327-32-32v-42.667c0.042-16.484,6.589-32.285,18.219-43.968L343.168,47.083 c34.333-34.333,89.997-34.333,124.33-0.001c0,0,0,0,0.001,0.001l18.752,18.752c34.333,34.333,34.333,89.997,0.001,124.33 c0,0,0,0-0.001,0.001l-267.2,267.2C197.771,478.744,168.831,490.734,138.667,490.667z'/%3E%3C/svg%3E%0A");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 67% 67%;
+  border: 1px solid #0099cc;
   border-radius: 5px;
-  border-top-left-radius: 0;
-  box-sizing: border-box;
-  padding: 3px 5px;
+  cursor: pointer;
+  transition: opacity .3s;
 }

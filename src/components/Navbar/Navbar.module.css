@@ -2,14 +2,16 @@
   grid-area: nav;
   background-color: #0099cc;
   box-sizing: border-box;
-  padding: 0 15px;
+  padding: 15px;
   color: #fff;
   border-radius: 5px;
+  min-width: 220px;
 }
 
 .items {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .item {
@@ -25,6 +27,6 @@
 }
 
 .selector {
-  border-top: 1px solid rgba(255, 255, 255, .7);
+  border-top: 1px dotted rgba(255, 255, 255, .7);
   border-bottom: transparent;
 }
