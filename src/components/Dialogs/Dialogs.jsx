@@ -1,15 +1,16 @@
 import React from 'react';
-import TextForm from '../TextForm/TextForm';
+import MessageTextForm from './MessageTextForm/MessageTextForm';
 import classes from './Dialogs.module.css';
 import DialogsUser from './DialogsUser/DialogsUser';
 import MessageContainer from './MessageContainer/MessageContainer';
 
 const Dialogs = (props) => {
-  const usersElements = props.state.users.map((user, i) => (
+  
+  const usersElements = props.dialogsPage.users.map((user, i) => (
     <DialogsUser name={user.name} id={user.id} key={i} />
   ));
 
-  const messagesElements = props.state.messagesData.map((message, i) => (
+  const messagesElements = props.dialogsPage.messagesData.map((message, i) => (
     <MessageContainer
       key={i}
       img={message.avatar}
@@ -28,9 +29,9 @@ const Dialogs = (props) => {
         <div>
           {messagesElements}
         </div>
-        <div className={classes.formItems} >
+        <div className={classes.formItems}>
           <button className={classes.attachment} />
-          <TextForm />
+          <MessageTextForm dispatch={props.dispatch} newSendText={props.newSendText} />
         </div>
       </div>
     </div>

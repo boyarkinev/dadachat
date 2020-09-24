@@ -4,6 +4,7 @@ import MyPosts from './MyPosts/MyPosts';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 
 const Profile = (props) => {
+  
   return (
     <div className={classes.content}>
       <div>
@@ -14,7 +15,10 @@ const Profile = (props) => {
         />
       </div>
       <ProfileInfo />
-      <MyPosts postsData={props.state.postsData} addPost={props.addPost} />
+      <MyPosts postsData={props.profilePage.postsData} 
+        dispatch={props.dispatch} 
+        newSendText={props.newSendText}
+      />
     </div>
   );
 };
