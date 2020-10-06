@@ -2,30 +2,31 @@ import React from 'react';
 import classes from './MessageTextForm.module.css';
 
 const MessageTextForm = (props) => {
-  
+
   const newPostElement = React.createRef();
 
-  const addMessage = () => {
-    props.dispatch({ type: 'ADD-MESSAGE' });
+  const onAddMessage = () => {
+    props.addMessage();
   };
 
-  const onPostChange = () => {
+  const onNewMessageChange = () => {
     const text = newPostElement.current.value;
-    props.dispatch({ type: 'UPDATE-TEXT', newText: text });
+    props.updateNewMessageText(text);
   }
 
   const clickHandler = (event) => {
     event.preventDefault();
-    addMessage();
+    onAddMessage();
   };
 
   return (
     <form className={classes.form}>
       <textarea
-        onChange={onPostChange}
+        onChange={onNewMessageChange}
         ref={newPostElement}
         className={classes.message}
-        value={props.newSendText}
+        value={props.newMessageText}
+        placeholder="Введите текст"
       />
       <div className={classes.send}>
         <button onClick={clickHandler} className={classes.button}>

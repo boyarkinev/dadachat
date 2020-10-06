@@ -12,27 +12,19 @@ import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 
 const App = (props) => {
-
   return (
       <div className='app-wrapper'>
         <Header />
-        <Navbar state={props.state.friendsList} />
+        <Navbar />
 
         <div className='app-wrapper-content'>
           <Route
             path='/profile'
-            render={() => <Profile
-              profilePage={props.state.profilePage}
-              newSendText={props.state.newSendText}
-              dispatch={props.dispatch}
-            />}
+            render={() => <Profile />}
           />
           <Route
             path='/dialogs'
-            render={() => <Dialogs 
-              dialogsPage={props.state.dialogsPage}
-              newSendText={props.state.newSendText}
-              dispatch={props.dispatch} />}
+            render={() => <Dialogs />}
           />
           <Route path='/news' component={News} />
           <Route path='/music' component={Music} />
