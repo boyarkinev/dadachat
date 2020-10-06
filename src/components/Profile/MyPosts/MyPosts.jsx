@@ -1,8 +1,6 @@
 import React from 'react';
 import Post from './Post/Post';
 import classes from './MyPosts.module.css';
-// import TextForm from '../TextForm/TextForm';
-// import { addPostActionCreator, updatePostActionCreator } from './../../../redux/profile-reducer';
 
 const MyPosts = (props) => {
 
@@ -14,7 +12,6 @@ const MyPosts = (props) => {
 
   const onPostChange = () => {
     const text = newPostElement.current.value;
-    console.log(props)
     props.updateNewPostText(text)
   }
 
@@ -42,8 +39,6 @@ const MyPosts = (props) => {
         </button>
       </div>
     </form>
-
-      {/* <TextForm dispatch={props.dispatch} newPostText={props.newPostText} /> */}
 
       { postsElements }
 

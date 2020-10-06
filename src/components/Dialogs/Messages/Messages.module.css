@@ -1,4 +1,4 @@
-.messageContainer {
+.messages {
   display: grid;
   grid-template-columns: 50px auto;
   grid-template-rows: auto auto;

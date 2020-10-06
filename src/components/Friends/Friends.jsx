@@ -6,7 +6,7 @@ const Friends = (props) => {
   return (
     <div className={classes.friendsContainer}>
       <h3 className={classes.title}>Друзья</h3>
-      <FriendsList state={props.state} />
+      <FriendsList friendsList={props.friendsList} />
     </div>
   );
 };

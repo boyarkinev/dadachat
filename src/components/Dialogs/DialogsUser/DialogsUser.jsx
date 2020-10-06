@@ -4,11 +4,19 @@ import classes from './DialogsUser.module.css';
 
 const DialogsUser = (props) => {
   return (
-    <li className={classes.user}>
-      <NavLink to={'/dialogs/' + props.id} activeClassName={classes.active}>
-        {props.name}
-      </NavLink>
-    </li>
+    <div>
+      {props.usersData.map((user, i) => {
+        return (
+          <li name={user.name} id={user.id} key={i} className={classes.user}>
+            <NavLink
+              to={'/dialogs/' + user.id}
+              activeClassName={classes.active}>
+              {user.name}
+            </NavLink>
+          </li>
+        );
+      })}
+    </div>
   );
 };
 
