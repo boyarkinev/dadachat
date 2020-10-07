@@ -2,15 +2,28 @@ import React from 'react';
 import classes from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsContainer from './MyPosts/MyPostsContainer';
+import coverPicElemOne from './../../img/cover_pic_elem_1.svg'
+import coverPicElemTwo from './../../img/cover_pic_elem_2.svg'
+import coverPicElemThree from './../../img/cover_pic_elem_3.svg'
 
 const Profile = () => {
 
   return (
     <div className={classes.content}>
-      <div>
+      <div className={classes.cover}>
         <img
-          className={classes.cover}
-          src='https://www.globalpeoplestrategist.com/wp-content/uploads/2018/11/Canada.png?1596623420'
+          className={classes.pic}
+          src= {coverPicElemTwo}
+          alt='Cover'
+        />
+        <img
+          className={classes.pic}
+          src= {coverPicElemThree}
+          alt='Cover'
+        />
+        <img
+          className={classes.pic}
+          src= {coverPicElemOne}
           alt='Cover'
         />
       </div>
