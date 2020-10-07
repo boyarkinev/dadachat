@@ -55,8 +55,6 @@ const initialState = {
 
 const dialogsReducer = (state = initialState, action) => {
 
-  let stateCopy;
-
   switch(action.type) {
     case ADD_MESSAGE: {
       const newMessage = {
@@ -67,19 +65,17 @@ const dialogsReducer = (state = initialState, action) => {
         date: '2020-09-15',
         message: state.newMessageText,
       };
-      stateCopy = {
-        ...state,
-        newMessageText: '',
-        messagesData: [...state.messagesData, newMessage]
+      return { //создали и возвращаем объект с новыми данными
+        ...state, // забрали существующий state со всем содержимым
+        newMessageText: '', // закинули новые данные в элемент
+        messagesData: [...state.messagesData, newMessage] // закинули новые данные в элемент
       }
-      return stateCopy;
     }
     case UPDATE_NEW_MESSAGE_TEXT: {
-      stateCopy = {
-        ...state,
-        newMessageText: action.newMessage,
+      return { //создали и возвращаем объект с новыми данными
+        ...state, // забрали существующий state со всем содержимым
+        newMessageText: action.newMessage, // закинули новые данные в элемент
       }
-      return stateCopy;
     }
     default:
       return state;
