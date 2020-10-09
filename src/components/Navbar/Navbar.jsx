@@ -25,6 +25,14 @@ const Navbar = (props) => {
         </li>
         <li className={classes.item}>
           <NavLink
+            to='/users'
+            className='app-link app-link_light'
+            activeClassName={classes.active}>
+            Найти друзей
+          </NavLink>
+        </li>
+        <li className={classes.item}>
+          <NavLink
             to='/news'
             className='app-link app-link_light'
             activeClassName={classes.active}>

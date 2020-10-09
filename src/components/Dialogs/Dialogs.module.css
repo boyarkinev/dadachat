@@ -20,7 +20,7 @@
 
 .dialogsUsers {
   grid-area: dialogsUsers;
-  border: 1px solid lightblue;
+  border: 1px solid #73cbe9;
   border-radius: 5px;
   box-sizing: border-box;
   padding: 5px 10px;

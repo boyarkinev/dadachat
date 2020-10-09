@@ -18,12 +18,12 @@ const Profile = () => {
         />
         <img
           className={classes.pic}
-          src= {coverPicElemThree}
+          src= {coverPicElemOne}
           alt='Cover'
         />
         <img
-          className={classes.pic}
-          src= {coverPicElemOne}
+          className={classes.picabsolute}
+          src= {coverPicElemThree}
           alt='Cover'
         />
       </div>

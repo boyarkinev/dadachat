@@ -20,14 +20,14 @@ const profileReducer = (state = initialState, action) => {
         likesCounter: 0,
       }
       return { //создали и возвращаем объект с новыми данными
-        ...state, // забрали существующий state со всем содержимым
+        ...state, // создали копию state
         newPostText: '', // закинули новые данные в элемент
         postsData: [...state.postsData, newPost], // закинули новые данные в элемент
       }
     }
     case UPDATE_NEW_POST_TEXT: {
       return { //создали и возвращаем объект с новыми данными
-        ...state, // забрали существующий state со всем содержимым
+        ...state, // создали копию state
         newPostText: action.newPost, // закинули новые данные в элемент
       }
     }

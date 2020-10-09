@@ -66,14 +66,14 @@ const dialogsReducer = (state = initialState, action) => {
         message: state.newMessageText,
       };
       return { //создали и возвращаем объект с новыми данными
-        ...state, // забрали существующий state со всем содержимым
+        ...state, // создали копию state
         newMessageText: '', // закинули новые данные в элемент
         messagesData: [...state.messagesData, newMessage] // закинули новые данные в элемент
       }
     }
     case UPDATE_NEW_MESSAGE_TEXT: {
       return { //создали и возвращаем объект с новыми данными
-        ...state, // забрали существующий state со всем содержимым
+        ...state, // создали копию state
         newMessageText: action.newMessage, // закинули новые данные в элемент
       }
     }

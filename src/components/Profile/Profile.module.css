@@ -7,14 +7,23 @@
 
 .cover {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: flex-end;
   max-width: 100%;
   border-radius: 5px;
   background: linear-gradient(#0099cc, 45%, rgb(255, 248, 224));
-  /* background-color: antiquewhite; */
 }
 
 .pic {
+  max-height: 120px;
+  z-index: 1;
+}
+
+.picabsolute {
   max-height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
 }

@@ -1,0 +1,90 @@
+.title {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.friendsPage {
+  display: grid;
+  grid-template-rows: auto;
+  gap: 20px;
+}
+
+.followingItems {
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 10px;
+  overflow: hidden;
+}
+
+.userpic {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.button {
+  width: 130px;
+  font-size: 14px;
+  line-height: 28px;
+  border-top-left-radius: 5px;
+  border-top: 1px #73cbe9 solid;
+  border-left: 1px #73cbe9 solid;
+  border-bottom: transparent;
+  border-right: transparent;
+  position: absolute;
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  transition: background-color .3s, color .3s;
+}
+
+.button:hover {
+  color: #006699;
+  background-color: rgba(115, 203, 233, .5);
+}
+
+.follow {
+  color: #fff;
+  background-color: #73cbe9;
+}
+
+.unfollow {
+  color: #006699;
+  background-color: #fff;
+}
+
+.infoItems {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  border: 1px solid #73cbe9;
+  padding: 10px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mainText {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+}
+
+.plainText {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #666;
+  margin: 0;
+}
