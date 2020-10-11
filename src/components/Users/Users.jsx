@@ -1,22 +1,46 @@
-import * as axios from 'axios';
 import React from 'react';
-import classes from './Users.module.css'
-import userPic from './../../img/userpic.png'
+import classes from './Users.module.css';
+import userPic from './../../img/userpic.svg';
 
 const Users = (props) => {
 
-  if (props.users.length === 0) {
-    if (props.users.length === 0) {
-      axios.get("https://social-network.samuraijs.com/api/1.0/users")
-      .then(response => {
-        props.setUsers(response.data.items);
-      })
-    }
+  const pagesCount = Math.ceil(props.totalUsersCount / props.pageSize)
+
+  const pages = [];
+  for (let i = 1; i <= pagesCount; i++) {
+    pages.push(i);
   }
 
   return (
     <div className={classes.friendsPage}>
-      <h1 className={classes.title}>Найти друзей</h1>
+      <div className={classes.findElems}>
+        <h1 className={classes.title}>Найти друзей</h1>
+        <input
+          type='text'
+          className={classes.findInput}
+          placeholder='Введите имя'
+        />
+        <button className={classes.findButton}>
+          Найти
+        </button>
+      </div>
+      <div className={classes.pagination}>
+        {pages.map((page) => {
+          return (
+            <span
+              className={
+                props.currentPage === page
+                  ? `${classes.pageNumber} ${classes.pageNumberSelected}`
+                  : `${classes.pageNumber}`
+              }
+              onClick={(event) => {
+                props.onPageChanged(page);
+              }}>
+              {page}
+            </span>
+          );
+        })}
+      </div>
       {props.users.map((user) => (
         <div key={user.id} className={classes.followingItems}>
           <img
@@ -31,7 +55,7 @@ const Users = (props) => {
             </div>
             <div>
               <p className={classes.mainText}>
-                {"user.location.country"}, {"user.location.city"}
+                {'user.location.country'}, {'user.location.city'}
               </p>
               <div>
                 {user.follow ? (
@@ -39,7 +63,7 @@ const Users = (props) => {
                     onClick={() => {
                       props.unfollow(user.id);
                     }}
-                    className={`${classes.button} ${classes.follow}`}>
+                    className={`${classes.followButton} ${classes.follow}`}>
                     Отписаться
                   </button>
                 ) : (
@@ -47,7 +71,7 @@ const Users = (props) => {
                     onClick={() => {
                       props.follow(user.id);
                     }}
-                    className={`${classes.button} ${classes.unfollow}`}>
+                    className={`${classes.followButton} ${classes.unfollow}`}>
                     Подписаться
                   </button>
                 )}

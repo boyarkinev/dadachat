@@ -48,9 +48,9 @@
   transition: .3s;
   color: #fff;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .button:hover {
   background-color: #00cccc;
-  cursor: pointer;
 }
