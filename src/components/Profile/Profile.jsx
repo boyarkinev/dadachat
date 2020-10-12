@@ -2,32 +2,14 @@ import React from 'react';
 import classes from './Profile.module.css';
 import ProfileInfo from './ProfileInfo/ProfileInfo';
 import MyPostsContainer from './MyPosts/MyPostsContainer';
-import coverPicElemOne from './../../img/cover_pic_elem_1.svg'
-import coverPicElemTwo from './../../img/cover_pic_elem_2.svg'
-import coverPicElemThree from './../../img/cover_pic_elem_3.svg'
+import ProfileHeader from './ProfileHeader/ProfileHeader';
 
-const Profile = () => {
+const Profile = (props) => {
 
   return (
     <div className={classes.content}>
-      <div className={classes.cover}>
-        <img
-          className={classes.pic}
-          src= {coverPicElemTwo}
-          alt='Cover'
-        />
-        <img
-          className={classes.pic}
-          src= {coverPicElemOne}
-          alt='Cover'
-        />
-        <img
-          className={classes.picabsolute}
-          src= {coverPicElemThree}
-          alt='Cover'
-        />
-      </div>
-      <ProfileInfo />
+      <ProfileHeader />
+      <ProfileInfo profile={props.profile} />
       <MyPostsContainer />
     </div>
   );
