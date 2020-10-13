@@ -99,7 +99,7 @@
 }
 
 .navUserpic:focus .userpic {
-  border: 2px solid rgb(73, 73, 172);
+  border: 2px solid rgba(0, 84, 197, 1);
 }
 
 .followButton {
@@ -127,6 +127,7 @@
 .followButton:focus {
   outline: transparent;
   text-decoration: underline;
+  font-weight: bold;
   box-shadow: inset 0 0 10px 1px rgba(115, 203, 233, .5);
 }
 
