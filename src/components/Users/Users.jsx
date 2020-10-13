@@ -1,7 +1,8 @@
 import React from 'react';
 import classes from './Users.module.css';
-import userPic from './../../img/userpic.svg';
+import AvatarPlug from './../../img/userpic.svg';
 import { NavLink } from 'react-router-dom';
+import { followAPI } from '../../api/api';
 
 const Users = (props) => {
 
@@ -43,11 +44,11 @@ const Users = (props) => {
           );
         })}
       </div>
-      {props.users.map((user) => (
-        <div key={user.id} className={classes.followingItems}>
-          <NavLink to={'/profile/' + user.id}>
+      {props.users.map((user, index) => (
+        <div key={index} className={classes.followingItems}>
+          <NavLink to={'/profile/' + user.id} className={classes.navUserpic}>
             <img
-              src={user.photos.small != null ? user.photos.small : userPic}
+              src={user.photos.large != null ? user.photos.large : AvatarPlug}
               alt='UserPic'
               className={classes.userpic}
             />
@@ -62,22 +63,25 @@ const Users = (props) => {
                 {'user.location.country'}, {'user.location.city'}
               </p>
               <div>
-                {user.follow ? (
-                  <button
-                    onClick={() => {
-                      props.unfollow(user.id);
-                    }}
-                    className={`${classes.followButton} ${classes.follow}`}>
-                    Отписаться
-                  </button>
-                ) : (
-                  <button
-                    onClick={() => {
-                      props.follow(user.id);
-                    }}
-                    className={`${classes.followButton} ${classes.unfollow}`}>
-                    Подписаться
-                  </button>
+                {user.followed
+                ?
+                (<button onClick={() => {
+                  followAPI // Вынесли логику работы с Api в отдельный файл
+                    .unfollow(user.id)
+                    .then((data) => {
+                      if (data.resultCode === 0) { props.unfollow(user.id) }
+                    });
+                }}
+                className={`${classes.followButton} ${classes.follow}`}>Отписаться</button>)
+                :
+                (<button onClick={() => {
+                  followAPI // Вынесли логику работы с Api в отдельный файл
+                    .follow(user.id)
+                    .then((data) => {
+                      if (data.resultCode === 0) { props.follow(user.id) }
+                    });
+                }}
+                className={`${classes.followButton} ${classes.unfollow}`}>Подписаться</button>
                 )}
               </div>
             </div>

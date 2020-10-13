@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Preloader from '../../Preloader/Preloader';
 import classes from './ProfileInfo.module.css';
+import AvatarPlug from '../../../img/userpic.svg'
 
 const ProfileInfo = (props) => {
 
@@ -21,23 +22,21 @@ const ProfileInfo = (props) => {
     <div>
       <div className={classes.user}>
         <div className={classes.user_pic}>
-          <img src={props.profile.photos.large} alt='User-pic' />
+          <img src={props.profile.photos.large !=null ? props.profile.photos.large : AvatarPlug} alt='Avatar' />
         </div>
         <div className={classes.user_data}>
           <h2 className={classes.user_name}>{props.profile.fullName}</h2>
           <p className={classes.user_info}>
-            Город: <span></span>
+            Город: <span>Не указан</span>
           </p>
           <p className={classes.user_info}>
-            Статус: <span>{props.profile.aboutMe}</span>
+            Статус: <span>{props.profile.aboutMe !=null ? props.profile.aboutMe : ' Не определен'}</span>
           </p>
           <p className={classes.user_info}>
-            Сайт: {''}
+            Сайт: {props.profile.contacts.website !=null ? props.profile.contacts.website : ' Не указан'}
             <NavLink
-              to={props.profile.contacts.vk}
-              className='app-link app-link_dark'
+              to='ya.ru'
               target='blank'>
-              {props.profile.contacts.vk}
             </NavLink>
           </p>
         </div>

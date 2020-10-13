@@ -5,6 +5,10 @@
   padding: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header img {
@@ -20,4 +24,14 @@
   margin: 0;
   color: #fff;
   text-align: center;
+}
+
+.login {
+  position: absolute;
+  right: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  text-decoration: none;
 }
