@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import DialogsUser from './DialogsUser';
 
-let mapStatToProps = (state) => {
+const mapStatToProps = (state) => {
   return {
     usersData: state.dialogsPage.users,
   }

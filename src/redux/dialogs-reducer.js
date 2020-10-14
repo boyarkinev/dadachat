@@ -51,11 +51,10 @@ const initialState = {
     },
   ],
   newMessageText: '',
-}
+};
 
 const dialogsReducer = (state = initialState, action) => {
-
-  switch(action.type) {
+  switch (action.type) {
     case ADD_MESSAGE: {
       const newMessage = {
         id: 10,
@@ -65,17 +64,19 @@ const dialogsReducer = (state = initialState, action) => {
         date: '2020-09-15',
         message: state.newMessageText,
       };
-      return { //создали и возвращаем объект с новыми данными
+      return {
+        //создали и возвращаем объект с новыми данными
         ...state, // создали копию state
         newMessageText: '', // закинули новые данные в элемент
-        messagesData: [...state.messagesData, newMessage] // закинули новые данные в элемент
-      }
+        messagesData: [...state.messagesData, newMessage], // закинули новые данные в элемент
+      };
     }
     case UPDATE_NEW_MESSAGE_TEXT: {
-      return { //создали и возвращаем объект с новыми данными
+      return {
+        //создали и возвращаем объект с новыми данными
         ...state, // создали копию state
         newMessageText: action.newMessage, // закинули новые данные в элемент
-      }
+      };
     }
     default:
       return state;
@@ -84,15 +85,15 @@ const dialogsReducer = (state = initialState, action) => {
 
 export const sendMessageCreator = () => {
   return {
-    type: ADD_MESSAGE
-  }
-}
+    type: ADD_MESSAGE,
+  };
+};
 
 export const updateNewMessageCreator = (text) => {
   return {
     type: UPDATE_NEW_MESSAGE_TEXT,
-    newMessage: text
-  }
-}
+    newMessage: text,
+  };
+};
 
 export default dialogsReducer;

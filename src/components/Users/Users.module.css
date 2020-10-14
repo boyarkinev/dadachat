@@ -127,23 +127,22 @@
 .followButton:focus {
   outline: transparent;
   text-decoration: underline;
-  font-weight: bold;
   box-shadow: inset 0 0 10px 1px rgba(115, 203, 233, .5);
 }
 
 .followButton:disabled {
   text-decoration: underline;
-  font-weight: bold;
-  /* color: gray; */
   box-shadow: inset 0 0 10px 1px rgba(0, 20, 0, .3);
+  background-color: #fff;
+  color: gray;
 }
 
-.follow {
+.unfollow {
   color: #fff;
   background-color: #73cbe9;
 }
 
-.unfollow {
+.follow {
   color: #006699;
   background-color: #fff;
 }
