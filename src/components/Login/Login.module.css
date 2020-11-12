@@ -1,9 +1,18 @@
-.form {
-  display: grid;
-  gap: 10px;
+.title {
+  grid-area: title;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: normal;
+  margin: 0;
 }
 
-.message {
+.loginItems {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 12px;
+}
+
+.input {
   font-family: 'Roboto', 'Helvetica Neue', sans-serif;
   font-size: 14px;
   line-height: auto;
@@ -14,15 +23,16 @@
   background-color: rgb(245, 245, 245);
   border: 1px solid #0099cc;
   border-radius: 5px;
-  min-height: 50px;
   box-sizing: border-box;
-  width: 100%;
 }
 
-.send {
-  width: 100%;
+.checkboxElems {
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+}
+
+.checkboxDescription {
+  font-size: 14px;
 }
 
 .button {
@@ -34,9 +44,5 @@
   transition: .3s;
   color: #fff;
   border-radius: 5px;
-}
-
-.button:hover {
-  background-color: #00cccc;
   cursor: pointer;
 }

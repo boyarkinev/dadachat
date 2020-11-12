@@ -1,5 +1,5 @@
 import React from 'react'
-import preloader from './../../img/preloader.png';
+import preloader from './../../../img/preloader.png';
 import classes from './Preloader.module.css'
 
 const Preloader = (props) => {

@@ -1,40 +1,39 @@
 import React from 'react';
+import { Field, reduxForm } from 'redux-form';
 import classes from './MessageTextForm.module.css';
+import { Textarea } from '../../commons/FormsControls/FormsControls';
+import { maxLengthCreator, required } from '../../../utils/validators/validators';
+
+const maxLength = maxLengthCreator(120); 
 
 const MessageTextForm = (props) => {
 
-  const newPostElement = React.createRef();
-
-  const onAddMessage = () => {
-    props.addMessage();
-  };
-
-  const onNewMessageChange = () => {
-    const text = newPostElement.current.value;
-    props.updateNewMessageText(text);
-  }
-
-  const clickHandler = (event) => {
-    event.preventDefault();
-    onAddMessage();
+  const addNewMessage = (values) => {
+    props.addMessage(values.newMessageText);
   };
 
   return (
-    <form className={classes.form}>
-      <textarea
-        onChange={onNewMessageChange}
-        ref={newPostElement}
+      <AddMessageFormRedux onSubmit={addNewMessage} />
+  );
+};
+
+const addMessageForm = (props) => {
+  return (
+    <form onSubmit={props.handleSubmit} className={classes.form}>
+      <Field
+        component={Textarea}
+        validate={[required, maxLength]}
+        name='newMessageText'
+        placeholder='Введите текст'
         className={classes.message}
-        value={props.newMessageText}
-        placeholder="Введите текст"
       />
       <div className={classes.send}>
-        <button onClick={clickHandler} className={classes.button}>
-          Отправить
-        </button>
+        <button className={classes.button}>Отправить</button>
       </div>
     </form>
   );
-};
+}
+
+const AddMessageFormRedux = reduxForm({form: 'dialogMessageTextForm'})(addMessageForm);
 
 export default MessageTextForm;

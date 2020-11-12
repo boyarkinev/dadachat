@@ -31,7 +31,31 @@
   right: 20px;
   color: #fff;
   font-size: 14px;
-  line-height: 22px;
+  line-height: 16px;
   font-weight: normal;
   text-decoration: none;
+}
+
+.logout {
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-decoration: underline;
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.logout:hover {
+  color: #006699;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }

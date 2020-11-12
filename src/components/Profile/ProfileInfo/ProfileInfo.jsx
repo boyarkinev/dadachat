@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import Preloader from '../../Preloader/Preloader';
+import Preloader from '../../commons/Preloader/Preloader';
 import classes from './ProfileInfo.module.css';
 import AvatarPlug from '../../../img/userpic.svg'
 import ProfileStatus from '../ProfileStatus/ProfileStatus';
@@ -31,8 +31,7 @@ const ProfileInfo = (props) => {
             Город: <span>Не указан</span>
           </p>
           <p className={classes.user_info}>
-            {/* Статус: <span>{props.profile.aboutMe !=null ? props.profile.aboutMe : ' Не определен'}</span> */}
-            Статус: <ProfileStatus status={'Hello My Friends!'}/>
+            Статус: <ProfileStatus status={props.status} updateStatus={props.updateStatus}/>
           </p>
           <p className={classes.user_info}>
             Сайт: {props.profile.contacts.website !=null ? props.profile.contacts.website : ' Не указан'}

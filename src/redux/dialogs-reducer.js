@@ -1,5 +1,4 @@
 const ADD_MESSAGE = 'ADD-MESSAGE';
-const UPDATE_NEW_MESSAGE_TEXT = 'UPDATE-NEW-MESSAGE-TEXT';
 
 const initialState = {
   users: [
@@ -50,7 +49,6 @@ const initialState = {
         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sed rerum dolore corrupti quo recusandae dolor quia ratione iure saepe, et, inventore blanditiis neque veritatis architecto dignissimos omnis quibusdam laudantium!',
     },
   ],
-  newMessageText: '',
 };
 
 const dialogsReducer = (state = initialState, action) => {
@@ -62,20 +60,12 @@ const dialogsReducer = (state = initialState, action) => {
           'https://cdn.pixabay.com/photo/2017/07/18/23/23/user-2517433_960_720.png',
         userName: 'Имя',
         date: '2020-09-15',
-        message: state.newMessageText,
+        message: action.newMessageText,
       };
       return {
         //создали и возвращаем объект с новыми данными
         ...state, // создали копию state
-        newMessageText: '', // закинули новые данные в элемент
         messagesData: [...state.messagesData, newMessage], // закинули новые данные в элемент
-      };
-    }
-    case UPDATE_NEW_MESSAGE_TEXT: {
-      return {
-        //создали и возвращаем объект с новыми данными
-        ...state, // создали копию state
-        newMessageText: action.newMessage, // закинули новые данные в элемент
       };
     }
     default:
@@ -83,16 +73,9 @@ const dialogsReducer = (state = initialState, action) => {
   }
 };
 
-export const sendMessageCreator = () => {
+export const sendMessageCreator = (newMessageText) => {
   return {
-    type: ADD_MESSAGE,
-  };
-};
-
-export const updateNewMessageCreator = (text) => {
-  return {
-    type: UPDATE_NEW_MESSAGE_TEXT,
-    newMessage: text,
+    type: ADD_MESSAGE, newMessageText
   };
 };
 

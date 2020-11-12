@@ -1,12 +1,12 @@
 import { connect } from 'react-redux';
 import Friends from './Friends';
 
-const mapStatToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     friendsList: state.friendsList
   }
 }
 
-const FriendsContainer = connect(mapStatToProps)(Friends)
+const FriendsContainer = connect(mapStateToProps)(Friends)
 
 export default FriendsContainer;

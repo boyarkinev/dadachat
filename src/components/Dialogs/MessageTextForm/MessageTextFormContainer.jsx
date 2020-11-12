@@ -1,8 +1,8 @@
-import { sendMessageCreator, updateNewMessageCreator } from '../../../redux/dialogs-reducer';
+import { sendMessageCreator } from '../../../redux/dialogs-reducer';
 import MessageTextForm from './MessageTextForm';
 import { connect } from 'react-redux';
 
-const mapStatToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     messagesData: state.dialogsPage.messagesData,
     newMessageText: state.dialogsPage.newMessageText,
@@ -11,17 +11,13 @@ const mapStatToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addMessage: () => {
-      const action = sendMessageCreator()
+    addMessage: (newMessageText) => {
+      const action = sendMessageCreator(newMessageText)
       dispatch(action);
     },
-    updateNewMessageText: (text) => {
-      const action = updateNewMessageCreator(text)
-      dispatch(action);
-    }
   }
 }
 
-const MessageTextFormContainer = connect(mapStatToProps, mapDispatchToProps)(MessageTextForm);
+const MessageTextFormContainer = connect(mapStateToProps, mapDispatchToProps)(MessageTextForm);
 
 export default MessageTextFormContainer;
