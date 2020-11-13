@@ -1,0 +1,27 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity .3s;
+}
+
+.item:hover {
+  opacity: .8;
+}
+
+.name {
+  font-size: 13px;
+  line-height: 14px;
+  font-weight: normal;
+  margin: 6px 0 0;
+  text-align: center;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

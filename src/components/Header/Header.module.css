@@ -1,0 +1,61 @@
+.header {
+  grid-area: header;
+  background-color: #0099cc;
+  box-sizing: border-box;
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header img {
+  width: 50px;
+  height: 50px;
+}
+
+.title {
+  font-family: 'Pacifico';
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: normal;
+  margin: 0;
+  color: #fff;
+  text-align: center;
+}
+
+.login {
+  position: absolute;
+  right: 20px;
+  color: #fff;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.logout {
+  background-color: transparent;
+  border: 1px solid transparent;
+  text-decoration: underline;
+  color: #fff;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: color .2s;
+}
+
+.logout:hover {
+  color: #006699;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}

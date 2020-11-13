@@ -1,0 +1,48 @@
+.title {
+  grid-area: title;
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.loginItems {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 12px;
+}
+
+.input {
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: auto;
+  font-weight: normal;
+  color: gray;
+  margin: 0;
+  padding: 5px 10px;
+  background-color: rgb(245, 245, 245);
+  border: 1px solid #0099cc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.checkboxElems {
+  display: flex;
+  align-items: center;
+}
+
+.checkboxDescription {
+  font-size: 14px;
+}
+
+.button {
+  min-width: 150px;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: #0099cc;
+  border: 1px transparent solid;
+  transition: .3s;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}

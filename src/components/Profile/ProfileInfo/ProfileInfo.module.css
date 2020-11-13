@@ -1,0 +1,41 @@
+.user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.user_pic {
+  display: flex;
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.user_pic img {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.user_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.user_name {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.user_info {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+  margin: 0;
+}

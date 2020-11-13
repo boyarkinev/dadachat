@@ -1,0 +1,13 @@
+.message {
+  grid-area: message;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: normal;
+  margin: 0;
+  color: inherit;
+  border: 1px solid #73cbe9;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  box-sizing: border-box;
+  padding: 3px 5px;
+}

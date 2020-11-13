@@ -1,0 +1,32 @@
+.nav {
+  grid-area: nav;
+  background-color: #0099cc;
+  box-sizing: border-box;
+  padding: 15px;
+  border-radius: 5px;
+  color: #fff;
+  min-width: 220px;
+}
+
+.items {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  margin-bottom: 10px;
+}
+
+.item a.active {
+  color: #ffff99;
+}
+
+.item:last-of-type {
+  margin-bottom: 0;
+}
+
+.selector {
+  border-top: 1px dotted rgba(255, 255, 255, .7);
+  border-bottom: transparent;
+}
