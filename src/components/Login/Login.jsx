@@ -2,8 +2,8 @@ import styleError from '../commons/FormsControls/FormsControls.module.css';
 import classes from './Login.module.css'
 
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
-import { Input } from '../commons/FormsControls/FormsControls';
+import { reduxForm } from 'redux-form';
+import { Input, createField } from '../commons/FormsControls/FormsControls';
 import { required } from '../../utils/validators/validators';
 import { connect } from 'react-redux';
 import { login } from '../../redux/auth-reducer';
@@ -11,41 +11,24 @@ import { Redirect } from 'react-router-dom';
 
 
 // Создаем собственную форму
-const LoginForm = (props) => {
+const LoginForm = ({handleSubmit, error}) => {
   return (
-    <form onSubmit={props.handleSubmit} className={classes.loginItems}>
+    <form onSubmit={handleSubmit} className={classes.loginItems}>
       <div>
-        <Field
-          validate={[required]}
-          placeholder={'Е-мэйл'}
-          name={'email'}
-          component={Input}
-          className={classes.input}
-        />
+        {createField('Е-мэйл', 'email', [required], Input, classes.input)}
       </div>
       <div>
-        <Field
-          validate={[required]}
-          placeholder={'Пароль'} 
-          name={'password'}
-          type={'password'}
-          component={Input}
-          className={classes.input}
-        />
+        {createField('Пароль', 'password', [required], Input, classes.input, {type: 'password'})}
       </div>
       <div className={classes.checkboxElems}>
-        <Field
-          type={'checkbox'}
-          name={'rememberMe'}
-          component={Input}
-        />
+        {createField(null, 'rememberMe', null, Input, null, {type: 'checkbox'})}
         <div className={classes.checkboxDescription}>
           {' '} Запомнить меня
         </div>
       </div>
-      {props.error &&
+      {error &&
         <div className={styleError.formSummaryError}>
-          {props.error}
+          {error}
         </div>
       }
       <div>

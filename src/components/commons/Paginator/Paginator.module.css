@@ -1,0 +1,30 @@
+.pagination {
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 5px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  overflow-x: scroll;
+}
+
+.pageNumber {
+  font-size: 16px;
+  font-weight: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, .7);
+  padding-left: 6px;
+  padding-right: 6px;
+  cursor: pointer;
+  transition: text-shadow .1s, color .1s;
+}
+
+.pageNumber:hover {
+  text-shadow: 0 0 2px gray;
+}
+
+.pageNumberSelected {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+}

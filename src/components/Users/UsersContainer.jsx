@@ -22,12 +22,14 @@ import {
 
 class UsersContainer extends React.Component {
   componentDidMount() {
-    this.props.requestUsers(this.props.currentPage, this.props.pageSize);
+    const {currentPage, pageSize} = this.props;
+    this.props.requestUsers(currentPage, pageSize);
   } // Обработали данные через thunk
 
   onPageChanged = (pageNumber) => {
+    const {pageSize} = this.props
     this.props.setCurrentPage(pageNumber);
-    this.props.requestUsers(pageNumber, this.props.pageSize);
+    this.props.requestUsers(pageNumber, pageSize);
   }; // Обработали данные через thunk
 
   render() {
