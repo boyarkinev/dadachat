@@ -21,12 +21,12 @@ const User = ({
       <div className={classes.infoItems}>
         <div className={classes.infoItem}>
           <p className={classes.mainText}>{user.name}</p>
-          <p className={classes.plainText}>{user.status}</p>
+          <p className={classes.plainText}>{user.status === null ? 'Статус не указан' : user.status}</p>
         </div>
         <div>
-          {/* <p className={classes.mainText}>
-            {'user.location.country'}, {'user.location.city'}
-          </p> */}
+          <p className={classes.mainText}>
+            Здесь задумывалось показать страну
+          </p>
           <div>
             {user.followed ? (
               <button

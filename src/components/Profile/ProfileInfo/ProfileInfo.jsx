@@ -8,7 +8,11 @@ import ProfileStatusWithHooks from '../ProfileStatus/ProfileStatusWhithHooks';
 const ProfileInfo = (props) => {
 
   if (!props.profile) {
-    return <Preloader />
+    return (
+      <div className={classes.preloaderContainer} >
+        <Preloader />
+      </div>
+    ) 
   }
   /*
   Изначально сюда проходит два profile - initialState и state.
