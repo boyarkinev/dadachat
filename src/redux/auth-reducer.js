@@ -1,14 +1,17 @@
 import { authAPI } from '../api/api';
 import { stopSubmit } from 'redux-form';
 
-const SET_USER_DATA = 'SET-USER-DATA';
+const SET_USER_DATA = 'dadachat/auth/SET-USER-DATA';
+/* Дописали к переменной префикс "dadachat/auth/",
+чтобы избежать конфликта при создании такой же
+переменной в другом месте. Префикс добавляет уникальность */
+
 
 const initialState = {
   id: null,
   email: null,
   login: null,
   isAuth: false,
-  // isFetching: false,
 };
 
 const authReducer = (state = initialState, action) => {
@@ -23,37 +26,37 @@ const authReducer = (state = initialState, action) => {
   }
 };
 
-export const setAuthUserData = (userId, email, login, isAuth) => ({ type: SET_USER_DATA, payload: {userId, email, login, isAuth} });
+export const setAuthUserData = (userId, email, login, isAuth) => ({
+  type: SET_USER_DATA,
+  payload: { userId, email, login, isAuth },
+});
 
-export const getAuthUserData = () => (dispatch) => {
-  return authAPI.me()
-    .then((response) => {
-      if (response.resultCode === 0) {
-        let { id, login, email } = response.data;
-        dispatch(setAuthUserData(id, email, login, true));
-      }
-    });
-}
+export const getAuthUserData = () => async (dispatch) => {
+  const response = await authAPI.me();
+  if (response.resultCode === 0) {
+    let { id, login, email } = response.data;
+    dispatch(setAuthUserData(id, email, login, true));
+  }
+};
 
-export const login = (email, password, rememberMe) => (dispatch) => {
+export const login = (email, password, rememberMe) => async (dispatch) => {
+  const response = await authAPI.login(email, password, rememberMe);
+  if (response.data.resultCode === 0) {
+    dispatch(getAuthUserData());
+  } else {
+    const message =
+      response.data.messages.length > 0
+        ? response.data.messages[0]
+        : 'Ошибка ввода';
+    dispatch(stopSubmit('login', { _error: message }));
+  }
+};
 
-  authAPI.login(email, password, rememberMe)
-    .then((response) => {
-      if (response.data.resultCode === 0) {
-        dispatch(getAuthUserData());
-      } else {
-        const message = response.data.messages.length > 0 ? response.data.messages[0] : 'Ошибка ввода';
-        dispatch(stopSubmit('login', {_error: message}));
-      }
-    });
-}
-
-export const logout = () => (dispatch) => {
-  authAPI.logout().then((response) => {
-    if (response.data.resultCode === 0) {
-      dispatch(setAuthUserData(null, null, null, false));
-    }
-  });
-}
+export const logout = () => async (dispatch) => {
+  const response = await authAPI.logout();
+  if (response.data.resultCode === 0) {
+    dispatch(setAuthUserData(null, null, null, false));
+  }
+};
 
 export default authReducer;
