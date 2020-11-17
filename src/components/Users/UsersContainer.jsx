@@ -14,7 +14,7 @@ import { compose } from 'redux';
 import {
   getUsers,
   getPageSize,
-  getTotalUsersCount,
+  gettotalItemsCount,
   getCurrentPage,
   getIsFetching,
   getFollowingInProgress,
@@ -37,7 +37,7 @@ class UsersContainer extends React.Component {
       <>
         {this.props.isFetching ? <Preloader /> : null}
         <Users
-          totalUsersCount={this.props.totalUsersCount}
+          totalItemsCount={this.props.totalItemsCount}
           pageSize={this.props.pageSize}
           currentPage={this.props.currentPage}
           onPageChanged={this.onPageChanged}
@@ -55,7 +55,7 @@ const mapStateToProps = (state) => {
   return {
     users: getUsers(state),
     pageSize: getPageSize(state),
-    totalUsersCount: getTotalUsersCount(state),
+    totalItemsCount: gettotalItemsCount(state),
     currentPage: getCurrentPage(state),
     isFetching: getIsFetching(state),
     followingInProgress: getFollowingInProgress(state),

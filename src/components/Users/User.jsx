@@ -24,9 +24,9 @@ const User = ({
           <p className={classes.plainText}>{user.status}</p>
         </div>
         <div>
-          <p className={classes.mainText}>
+          {/* <p className={classes.mainText}>
             {'user.location.country'}, {'user.location.city'}
-          </p>
+          </p> */}
           <div>
             {user.followed ? (
               <button

@@ -5,7 +5,7 @@ import User from './User';
 
 const Users = ({
   currentPage,
-  totalUsersCount,
+  totalItemsCount,
   pageSize,
   onPageChanged,
   users,
@@ -26,7 +26,7 @@ const Users = ({
       <Paginator
         currentPage={currentPage}
         onPageChanged={onPageChanged}
-        totalUsersCount={totalUsersCount}
+        totalItemsCount={totalItemsCount}
         pageSize={pageSize}
       />
 
