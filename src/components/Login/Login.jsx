@@ -12,6 +12,7 @@ import { Redirect } from 'react-router-dom';
 
 // Создаем собственную форму
 const LoginForm = ({handleSubmit, error}) => {
+  debugger;
   return (
     <form onSubmit={handleSubmit} className={classes.loginItems}>
       <div>

@@ -33,7 +33,7 @@ const AddNewPostForm = (props) => {
     <form onSubmit={props.handleSubmit} className={classes.form}>
       <Field
         component = {Textarea}
-        validate={[required, maxLength]}
+        // validate={[required, maxLength]}
         name="newPostText"
         placeholder="Введите текст"
         className={classes.message}
