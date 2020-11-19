@@ -8,9 +8,8 @@
 }
 
 .formSummaryError {
-  border: 1px solid red;
-  border-radius: 3px;
   padding: 3px;
   color: red;
   font-size: 12px;
+  width: fit-content;
 }
