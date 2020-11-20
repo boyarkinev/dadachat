@@ -1,5 +1,7 @@
-import React from 'react';
 import classes from './Friends.module.css';
+
+import React from 'react';
+
 import FriendsList from './FriendsList/FriendsList';
 
 const Friends = (props) => {

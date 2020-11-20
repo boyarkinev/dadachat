@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
-import Preloader from '../../commons/Preloader/Preloader';
 import classes from './ProfileInfo.module.css';
+import reusable from '../../../styles/reusable.module.css';
+
+import React, { useState } from 'react';
+import ReactTooltip from 'react-tooltip';
+
+import Preloader from '../../commons/Preloader/Preloader';
 import AvatarPlug from '../../../img/userpic.svg';
 import ProfileStatusWithHooks from '../ProfileStatus/ProfileStatusWithHooks';
-import ReactTooltip from 'react-tooltip';
 import ProfileDataForm from './ProfileDataForm';
 
 const ProfileInfo = ({
@@ -23,14 +26,6 @@ const ProfileInfo = ({
       </div>
     );
   }
-  /*
-  Изначально сюда проходит два profile - initialState и state.
-  Первый равен null, так как мы присвоили ему это значение.
-  Второй содержит данные с сервера, но они еще не загрузились в initialState.
-  Чтобы страница не падала при первом обращении, написали условие, при котором
-  в случае пустого state она перерисовывается с данными, который к тому моменту
-  уже загрузились.
-  */
 
   const onMainPhotoSelected = (event) => {
     if (event.target.files.length) {
@@ -66,9 +61,9 @@ const ProfileInfo = ({
           <img src={profile.photos.large || AvatarPlug} alt='Avatar' />
         </div>
         <div className={classes.user_data}>
-          <h2 className={classes.user_name}>{profile.fullName}</h2>
+          <h2 className={reusable.pageTitle}>{profile.fullName}</h2>
           <p
-            className={classes.user_info}
+            className={classes.user_status}
             data-tip={'Двойной щелчок для редактирования'}>
             <ProfileStatusWithHooks
               status={status}
@@ -89,18 +84,18 @@ const ProfileInfo = ({
 const ProfileData = ({ profile, isOwner, goToEditMode }) => {
   return (
     <div>
-      {isOwner && <button onClick={goToEditMode}>Редактировать</button>}
-      <p className={classes.user_info}>Имя: {profile.fullName}</p>
-      <p className={classes.user_info}>
+      {isOwner && <button onClick={goToEditMode} className={reusable.submitButton}>Редактировать</button>}
+      {/* <p className={classes.user_info}>Имя: {profile.fullName}</p> */}
+      {/* <p className={classes.user_info}>
         В поисках работы: {profile.lookingForAJob ? 'Да' : 'Нет'}
-      </p>
-      {profile.lookingForAJob && (
+      </p> */}
+      {/* {profile.lookingForAJob && (
         <p className={classes.user_info}>
           Мой стек: {profile.lookingForAJobDescription}
         </p>
       )}
-      <p className={classes.user_info}>Обо мне: {profile.aboutMe}</p>
-      <div className={classes.user_info}>
+      <p className={classes.user_info}>Обо мне: {profile.aboutMe}</p> */}
+      {/* <div className={classes.user_info}>
         Контакты:{' '}
         {Object.keys(profile.contacts).map((key) => {
           return (
@@ -111,17 +106,17 @@ const ProfileData = ({ profile, isOwner, goToEditMode }) => {
             />
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };
 
-const Contact = ({ contactTitle, contactValue }) => {
-  return (
-    <p className={classes.user_info}>
-      {contactTitle}: {contactValue}
-    </p>
-  );
-};
+// const Contact = ({ contactTitle, contactValue }) => {
+//   return (
+//     <p className={classes.user_info}>
+//       {contactTitle}: {contactValue}
+//     </p>
+//   );
+// };
 
 export default ProfileInfo;

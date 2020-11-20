@@ -13,11 +13,6 @@ const instance = axios.create({
   }
 })
 
-/*
-Создаем объект usersAPI, который не содержит данных,
-но содержит методы запроса к серверу.
-*/
-
 export const usersAPI = {
   getUsers (currentPage = 1, pageSize = 5) {
     return instance

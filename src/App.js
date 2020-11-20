@@ -1,6 +1,6 @@
 import './index.css';
 import React, { Component } from 'react';
-import { Route, withRouter, HashRouter } from 'react-router-dom';
+import { Route, withRouter, BrowserRouter, Redirect } from 'react-router-dom';
 import { connect, Provider } from 'react-redux';
 import { compose } from 'redux';
 
@@ -8,7 +8,6 @@ import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
-// import UsersContainer from './components/Users/UsersContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
 import LoginPage from './components/Login/Login';
 import Preloader from './components/commons/Preloader/Preloader';
@@ -42,25 +41,23 @@ class App extends Component {
         <Navbar />
   
         <div className='app-wrapper-content'>
-          <Route
-            path='/profile/:userId?'
-            render={withSuspense(ProfileContainer)}
-          />
-          <Route
-            path='/dialogs'
-            render={withSuspense(DialogsContainer)}
-          />
-          <Route 
-            path='/users'
-            render={withSuspense(UsersContainer)}
-          />
-  
+          <Route path='/' render={() => <Redirect to={'/profile'} />} />
+
+          <Route path='/profile/:userId?' render={withSuspense(ProfileContainer)} />
+
+          <Route path='/dialogs' render={withSuspense(DialogsContainer)} />
+
+          <Route path='/users' render={withSuspense(UsersContainer)}/>
+
           <Route path='/news' component={News} />
+
           <Route path='/music' component={Music} />
+
           <Route path='/settings' component={Settings} />
 
-          <Route path='/login' render={() => <LoginPage />}
-          />
+          <Route path='/login' render={() => <LoginPage />}/>
+
+          {/* <Route path='*' render={() => <p>404 Страница не найдена</p>}/> */}
         </div>
       </div>
     );
@@ -79,11 +76,11 @@ const AppContainer = compose(
 
 const DadachatApp = (props) => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 

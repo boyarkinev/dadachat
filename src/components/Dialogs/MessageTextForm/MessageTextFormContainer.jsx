@@ -1,6 +1,7 @@
+import { connect } from 'react-redux';
+
 import { sendMessageCreator } from '../../../redux/dialogs-reducer';
 import MessageTextForm from './MessageTextForm';
-import { connect } from 'react-redux';
 
 const mapStateToProps = (state) => {
   return {

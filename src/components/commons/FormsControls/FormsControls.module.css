@@ -13,3 +13,28 @@
   font-size: 12px;
   width: fit-content;
 }
+
+.input {
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #0099cc;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.submitButton {
+  min-width: 150px;
+  font-size: 14px;
+  line-height: 22px;
+  background-color: #0099cc;
+  border: 1px transparent solid;
+  transition: .3s;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #00cccc;
+}

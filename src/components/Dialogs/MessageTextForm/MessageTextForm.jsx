@@ -1,6 +1,8 @@
+import reusable from '../../../styles/reusable.module.css';
+
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import classes from './MessageTextForm.module.css';
+
 import { Textarea } from '../../commons/FormsControls/FormsControls';
 import { maxLengthCreator, required } from '../../../utils/validators/validators';
 
@@ -16,19 +18,18 @@ const MessageTextForm = (props) => {
       <AddMessageFormRedux onSubmit={addNewMessage} />
   );
 };
-
 const addMessageForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit} className={classes.form}>
+    <form onSubmit={props.handleSubmit} className={reusable.form}>
       <Field
         component={Textarea}
         validate={[required, maxLength]}
         name='newMessageText'
         placeholder='Введите текст'
-        className={classes.message}
+        className={reusable.textarea}
       />
-      <div className={classes.send}>
-        <button className={classes.button}>Отправить</button>
+      <div className={reusable.send}>
+        <button className={reusable.submitButton}>Отправить</button>
       </div>
     </form>
   );

@@ -3,19 +3,10 @@
   grid-template-rows: auto;
   grid-template-columns: 2fr 8fr;
   grid-template-areas:
-  'title title'
   'dialogsUsers dialogsMessages';
   column-gap: 30px;
   row-gap: 10px;
   color: #050505;
-}
-
-.title {
-  grid-area: title;
-  font-size: 22px;
-  line-height: 34px;
-  font-weight: normal;
-  margin: 0;
 }
 
 .dialogsUsers {

@@ -1,18 +1,21 @@
-import React from 'react';
 import classes from './ProfileInfo.module.css';
+import reusable from '../../../styles/reusable.module.css';
+
+import React from 'react';
+import { reduxForm } from 'redux-form';
+
 import styleError from '../../commons/FormsControls/FormsControls.module.css';
 import {
   createField,
   Input,
   Textarea,
 } from '../../commons/FormsControls/FormsControls';
-import { reduxForm } from 'redux-form';
 
 const ProfileDataForm = ({ handleSubmit, profile, error }) => {
   
   return (
     <form onSubmit={handleSubmit}>
-      <button>Сохранить</button>
+      <button className={reusable.submitButton}>Сохранить</button>
       {error && <div className={styleError.formSummaryError}>{error}</div>}
       <div className={classes.user_info}>
         Имя: {createField('Имя', 'fullName', [], Input)}
