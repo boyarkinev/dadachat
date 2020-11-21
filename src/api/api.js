@@ -1,7 +1,7 @@
 import * as axios from 'axios';
 
 /*
-Создаем экземпляр класса axios и заносим в него параметры
+Создали экземпляр класса axios и заносим в него параметры
 обращения к серверу.
 */
 
@@ -9,14 +9,9 @@ const instance = axios.create({
   withCredentials: true,
   baseURL: 'https://social-network.samuraijs.com/api/1.0/',
   headers: {
-    'API-KEY': '8d16dc72-4121-4068-ac07-811287ca5c12'
+    'API-KEY': '' // Взять отсюда при регистрации https://social-network.samuraijs.com/
   }
 })
-
-/*
-Создаем объект usersAPI, который не содержит данных,
-но содержит методы запроса к серверу.
-*/
 
 export const usersAPI = {
   getUsers (currentPage = 1, pageSize = 5) {
@@ -54,6 +49,19 @@ export const profileAPI = {
       .put(`profile/status`, {
         status: status
       });
+  },
+  savePhoto(photoFile) {
+    const formData = new FormData()
+    formData.append('image', photoFile)
+    return instance
+      .put(`profile/photo`, formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data'
+          }
+      });
+  },
+  saveProfile(profile) {
+    return instance.put(`profile`, profile);
   }
 }
 
@@ -63,13 +71,19 @@ export const authAPI = {
       .get('auth/me')
       .then(response => response.data)
   },
-  login (email, password, rememberMe = false) {
+  login (email, password, rememberMe = false, captcha = null) {
     return instance
-      .post('auth/login', { email, password, rememberMe })
+      .post('auth/login', { email, password, rememberMe, captcha })
   },
   logout () {
     return instance
       .delete('auth/login');
+  }
+}
+
+export const securityAPI = {
+  getCaptchaUrl () {
+    return instance.get(`security/get-captcha-url`);
   }
 }
 

@@ -1,7 +1,10 @@
-import React from 'react';
-import Post from './Post/Post';
 import classes from './MyPosts.module.css';
+import reusable from '../../../styles/reusable.module.css';
+
+import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+
+import Post from './Post/Post';
 import { maxLengthCreator, required } from '../../../utils/validators/validators';
 import { Textarea } from '../../commons/FormsControls/FormsControls';
 
@@ -19,9 +22,9 @@ const MyPosts = React.memo(props => {
 
   return (
     <div className={classes.posts}>
-      <h2 className={classes.title}>Мои посты</h2>
+      <h2 className={reusable.pageTitle}>Мои посты</h2>
 
-      <AddNewPostFormRedux onSubmit={onAddPost} className={classes.form} />
+      <AddNewPostFormRedux onSubmit={onAddPost} className={reusable.form} />
       
       { postsElements }
     </div>
@@ -30,16 +33,16 @@ const MyPosts = React.memo(props => {
 
 const AddNewPostForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit} className={classes.form}>
+    <form onSubmit={props.handleSubmit} className={reusable.form}>
       <Field
         component = {Textarea}
         validate={[required, maxLength]}
         name="newPostText"
         placeholder="Введите текст"
-        className={classes.message}
+        className={reusable.textarea}
       />
-      <div className={classes.send}>
-        <button className={classes.button}>Отправить</button>
+      <div className={reusable.send}>
+        <button className={reusable.submitButton}>Отправить</button>
       </div>
     </form>
   );

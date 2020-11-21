@@ -3,15 +3,17 @@ import classes from './Login.module.css'
 
 import React from 'react';
 import { reduxForm } from 'redux-form';
+import { Redirect } from 'react-router-dom';
+
 import { Input, createField } from '../commons/FormsControls/FormsControls';
 import { required } from '../../utils/validators/validators';
 import { connect } from 'react-redux';
 import { login } from '../../redux/auth-reducer';
-import { Redirect } from 'react-router-dom';
 
 
 // Создаем собственную форму
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({handleSubmit, error, captchaUrl}) => {
+
   return (
     <form onSubmit={handleSubmit} className={classes.loginItems}>
       <div>
@@ -26,6 +28,10 @@ const LoginForm = ({handleSubmit, error}) => {
           {' '} Запомнить меня
         </div>
       </div>
+
+      { captchaUrl && <img src={captchaUrl} alt="" /> }
+      { captchaUrl && createField('Введите код', 'captcha', [required], Input, null, {})}
+
       {error &&
         <div className={styleError.formSummaryError}>
           {error}
@@ -48,7 +54,7 @@ const LoginReduxForm = reduxForm({
 
 const Login = (props) => {
   const onSubmit = (formData) => {
-    props.login(formData.email, formData.password, formData.rememberMe);
+    props.login(formData.email, formData.password, formData.rememberMe, formData.captcha);
   };
 
   if (props.isAuth) {
@@ -58,12 +64,13 @@ const Login = (props) => {
   return (
     <div>
       <h1 className={classes.title}>Войти</h1>
-      <LoginReduxForm onSubmit={onSubmit} />
+      <LoginReduxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl} />
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
+  captchaUrl: state.auth.captchaUrl,
   isAuth: state.auth.isAuth
 })
 

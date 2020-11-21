@@ -1,5 +1,6 @@
-import React from 'react';
 import classes from './Users.module.css';
+
+import React from 'react';
 import Paginator from '../commons/Paginator/Paginator';
 import User from './User';
 

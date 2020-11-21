@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
+
 import {
   follow,
   unfollow,
@@ -10,15 +12,15 @@ import {
 import Users from './Users';
 import Preloader from '../commons/Preloader/Preloader';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
-import { compose } from 'redux';
 import {
   getUsers,
   getPageSize,
-  gettotalItemsCount,
+  getTotalItemsCount,
   getCurrentPage,
   getIsFetching,
   getFollowingInProgress,
 } from '../../redux/users-selectors';
+import classes from './Users.module.css';
 
 class UsersContainer extends React.Component {
   componentDidMount() {
@@ -35,7 +37,9 @@ class UsersContainer extends React.Component {
   render() {
     return (
       <>
-        {this.props.isFetching ? <Preloader /> : null}
+        <div className={classes.preloaderContainer}>
+          {this.props.isFetching ? <Preloader /> : null}
+        </div>
         <Users
           totalItemsCount={this.props.totalItemsCount}
           pageSize={this.props.pageSize}
@@ -55,7 +59,7 @@ const mapStateToProps = (state) => {
   return {
     users: getUsers(state),
     pageSize: getPageSize(state),
-    totalItemsCount: gettotalItemsCount(state),
+    totalItemsCount: getTotalItemsCount(state),
     currentPage: getCurrentPage(state),
     isFetching: getIsFetching(state),
     followingInProgress: getFollowingInProgress(state),

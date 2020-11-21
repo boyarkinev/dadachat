@@ -1,5 +1,6 @@
-import React from 'react';
 import classes from './Messages.module.css';
+
+import React from 'react';
 import MessageInfo from './MessageInfo/MessageInfo';
 import Message from './Message/Message';
 

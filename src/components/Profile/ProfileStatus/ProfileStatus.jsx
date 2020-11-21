@@ -3,41 +3,51 @@ import React from 'react';
 class ProfileStatus extends React.Component {
   state = {
     editMode: false,
-    status: this.props.status
-  } // State хранит состояние в булевом значении
+    status: this.props.status,
+  }; // State хранит состояние в булевом значении
 
   activateEditMode = () => {
-    this.setState({editMode: true})
-  } 
+    this.setState({ editMode: true });
+  };
 
   deactivateEditMode = () => {
-    this.setState({editMode: false})
-    this.props.updateStatus(this.state.status)
-  } 
+    this.setState({ editMode: false });
+    this.props.updateStatus(this.state.status);
+  };
   /* Callback изменит состояние стэйта, когда этот callback вызовут
   Формат this.state.editMode = true здесь не работает.
   Важно знать, что .setState() - асинхронный метод - он не выполняет код сразу.
   */
 
- onStatusChange = (e) => {
-  this.setState({
-    status: e.currentTarget.value,
-  });
-}
-
-componentDidUpdate(prevProps, prevState) {
-  if (prevProps.status !== this.props.status) {
+  onStatusChange = (e) => {
     this.setState({
-      status: this.props.status
+      status: e.currentTarget.value,
     });
+  };
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    if (prevProps.status !== this.props.status) {
+      this.setState({
+        status: this.props.status,
+      });
+    }
   }
-}
 
   render() {
     return (
       <>
-        {!this.state.editMode && <span onDoubleClick={this.activateEditMode}>{this.props.status || "----------"}</span>}
-        {this.state.editMode && <input onChange={this.onStatusChange} autoFocus={true} onBlur={this.deactivateEditMode} value={this.state.status}></input>}
+        {!this.state.editMode && (
+          <span onDoubleClick={this.activateEditMode}>
+            {this.props.status || '----------'}
+          </span>
+        )}
+        {this.state.editMode && (
+          <input
+            onChange={this.onStatusChange}
+            autoFocus={true}
+            onBlur={this.deactivateEditMode}
+            value={this.state.status}></input>
+        )}
       </>
     );
   }

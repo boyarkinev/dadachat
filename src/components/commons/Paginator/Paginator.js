@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
 import classes from './Paginator.module.css';
+
+import React, {useState} from 'react';
 
 const Paginator = ({totalItemsCount, pageSize, currentPage, onPageChanged, portionSize = 10}) => {
   const pagesCount = Math.ceil(totalItemsCount / pageSize);
