@@ -56,8 +56,6 @@ class App extends Component {
           <Route path='/settings' component={Settings} />
 
           <Route path='/login' render={() => <LoginPage />}/>
-
-          {/* <Route path='*' render={() => <p>404 Страница не найдена</p>}/> */}
         </div>
       </div>
     );

@@ -1,7 +1,7 @@
 import * as axios from 'axios';
 
 /*
-Создаем экземпляр класса axios и заносим в него параметры
+Создали экземпляр класса axios и заносим в него параметры
 обращения к серверу.
 */
 
@@ -9,7 +9,7 @@ const instance = axios.create({
   withCredentials: true,
   baseURL: 'https://social-network.samuraijs.com/api/1.0/',
   headers: {
-    'API-KEY': '8d16dc72-4121-4068-ac07-811287ca5c12'
+    'API-KEY': '' // Взять отсюда при регистрации https://social-network.samuraijs.com/
   }
 })
 

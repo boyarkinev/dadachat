@@ -1,5 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { compose } from 'redux';
+
 import {
   follow,
   unfollow,
@@ -10,7 +12,6 @@ import {
 import Users from './Users';
 import Preloader from '../commons/Preloader/Preloader';
 import { withAuthRedirect } from '../../hoc/withAuthRedirect';
-import { compose } from 'redux';
 import {
   getUsers,
   getPageSize,

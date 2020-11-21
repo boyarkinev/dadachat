@@ -60,7 +60,7 @@
 }
 
 .fileUpload input[type="file"] {
-  display: none;/* скрываем input file */
+  display: none;
 }
 
 .fileUpload span {

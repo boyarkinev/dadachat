@@ -52,7 +52,7 @@ const ProfileInfo = ({
                     id={'uploadFile'}
                     onChange={onMainPhotoSelected}
                   />
-                  <span></span>
+                  <span tabIndex={'0'}></span>
                 </label>
               </div>
             )}

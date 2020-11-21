@@ -6,10 +6,6 @@ const initialState = {
     { id: 2, name: 'Имя Фамилия' },
     { id: 3, name: 'Имя Фамилия' },
     { id: 4, name: 'Имя Фамилия' },
-    { id: 5, name: 'Имя Фамилия' },
-    { id: 6, name: 'Имя Фамилия' },
-    { id: 7, name: 'Имя Фамилия' },
-    { id: 8, name: 'Имя Фамилия' },
   ],
   messagesData: [
     {

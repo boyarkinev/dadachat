@@ -1,6 +1,7 @@
-import React from 'react'
-import preloader from './../../../img/preloader.png';
 import classes from './Preloader.module.css'
+import preloader from './../../../img/preloader.png';
+
+import React from 'react'
 
 const Preloader = () => {
   return (

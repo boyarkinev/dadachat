@@ -3,11 +3,12 @@ import classes from './Login.module.css'
 
 import React from 'react';
 import { reduxForm } from 'redux-form';
+import { Redirect } from 'react-router-dom';
+
 import { Input, createField } from '../commons/FormsControls/FormsControls';
 import { required } from '../../utils/validators/validators';
 import { connect } from 'react-redux';
 import { login } from '../../redux/auth-reducer';
-import { Redirect } from 'react-router-dom';
 
 
 // Создаем собственную форму

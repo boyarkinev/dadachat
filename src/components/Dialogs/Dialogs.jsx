@@ -12,6 +12,7 @@ const Dialogs = () => {
   return (
     <div>
       <h2 className={reusable.pageTitle}>Мои диалоги</h2>
+      <p className={reusable.technicalInfo}>[ Страница в доработке ]</p>
       <div className={classes.dialogs}>
         <ul className={classes.dialogsUsers}>
           <DialogsUserContainer />
@@ -21,7 +22,12 @@ const Dialogs = () => {
             <MessagesContainer />
           </div>
           <div className={classes.formItems}>
-            <button className={classes.attachment} />
+            <div className={classes.attachment}>
+              <label>
+                <input type={'file'} />
+                <span tabIndex={'0'}></span>
+              </label>
+            </div>
             <MessageTextFormContainer />
           </div>
         </div>

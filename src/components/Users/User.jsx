@@ -1,5 +1,7 @@
-import React from 'react';
 import classes from './User.module.css';
+
+import React from 'react';
+
 import AvatarPlug from './../../img/userpic.svg';
 import { NavLink } from 'react-router-dom';
 

@@ -1,5 +1,6 @@
-import React from 'react';
 import classes from './MessageInfo.module.css';
+
+import React from 'react';
 
 const MessageInfo = (props) => {
   return (
