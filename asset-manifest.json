@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/dadachat/static/css/main.c9310753.chunk.css",
+    "main.js": "/dadachat/static/js/main.b47e9790.chunk.js",
+    "main.js.map": "/dadachat/static/js/main.b47e9790.chunk.js.map",
+    "runtime-main.js": "/dadachat/static/js/runtime-main.17a47cee.js",
+    "runtime-main.js.map": "/dadachat/static/js/runtime-main.17a47cee.js.map",
+    "static/js/2.27743494.chunk.js": "/dadachat/static/js/2.27743494.chunk.js",
+    "static/js/2.27743494.chunk.js.map": "/dadachat/static/js/2.27743494.chunk.js.map",
+    "static/css/3.659fab35.chunk.css": "/dadachat/static/css/3.659fab35.chunk.css",
+    "static/js/3.ba57a49b.chunk.js": "/dadachat/static/js/3.ba57a49b.chunk.js",
+    "static/js/3.ba57a49b.chunk.js.map": "/dadachat/static/js/3.ba57a49b.chunk.js.map",
+    "static/css/4.c30a5491.chunk.css": "/dadachat/static/css/4.c30a5491.chunk.css",
+    "static/js/4.cee8e802.chunk.js": "/dadachat/static/js/4.cee8e802.chunk.js",
+    "static/js/4.cee8e802.chunk.js.map": "/dadachat/static/js/4.cee8e802.chunk.js.map",
+    "static/css/5.829d2d1d.chunk.css": "/dadachat/static/css/5.829d2d1d.chunk.css",
+    "static/js/5.1d53400c.chunk.js": "/dadachat/static/js/5.1d53400c.chunk.js",
+    "static/js/5.1d53400c.chunk.js.map": "/dadachat/static/js/5.1d53400c.chunk.js.map",
+    "static/js/6.1aa6573b.chunk.js": "/dadachat/static/js/6.1aa6573b.chunk.js",
+    "static/js/6.1aa6573b.chunk.js.map": "/dadachat/static/js/6.1aa6573b.chunk.js.map",
+    "index.html": "/dadachat/index.html",
+    "precache-manifest.b4037158eee4300af2b76dd0b76f0a49.js": "/dadachat/precache-manifest.b4037158eee4300af2b76dd0b76f0a49.js",
+    "service-worker.js": "/dadachat/service-worker.js",
+    "static/css/3.659fab35.chunk.css.map": "/dadachat/static/css/3.659fab35.chunk.css.map",
+    "static/css/4.c30a5491.chunk.css.map": "/dadachat/static/css/4.c30a5491.chunk.css.map",
+    "static/css/5.829d2d1d.chunk.css.map": "/dadachat/static/css/5.829d2d1d.chunk.css.map",
+    "static/css/main.c9310753.chunk.css.map": "/dadachat/static/css/main.c9310753.chunk.css.map",
+    "static/js/2.27743494.chunk.js.LICENSE.txt": "/dadachat/static/js/2.27743494.chunk.js.LICENSE.txt",
+    "static/media/cover_pic_elem_1.svg": "/dadachat/static/media/cover_pic_elem_1.cc571328.svg",
+    "static/media/cover_pic_elem_2.svg": "/dadachat/static/media/cover_pic_elem_2.58541e94.svg",
+    "static/media/cover_pic_elem_3.svg": "/dadachat/static/media/cover_pic_elem_3.0c2b72f2.svg",
+    "static/media/index.css": "/dadachat/static/media/robotoslab-regular.935f2673.woff2",
+    "static/media/preloader.png": "/dadachat/static/media/preloader.763f39e5.png",
+    "static/media/userpic.svg": "/dadachat/static/media/userpic.e9fbda13.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.17a47cee.js",
+    "static/js/2.27743494.chunk.js",
+    "static/css/main.c9310753.chunk.css",
+    "static/js/main.b47e9790.chunk.js"
+  ]
+}
