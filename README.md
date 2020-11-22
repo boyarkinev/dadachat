@@ -33,6 +33,13 @@
 
 Подробнее: [deployment](https://facebook.github.io/create-react-app/docs/deployment).
 
+### Нюансы gh-pages
+
+Приложение не работает корректно, если деплоить `as is`.
+
+Предварительно в файле App.js необходимо заменить тэг `BrouserRouter` на `HashRouter`. В нем указать атрибут `basename` со значением `{process.env.PUBLIC_URL}`.  
+`HashRouter` необходимо импортировать как компонент `react-router-dom`.
+
 ## Функционал
 
 * Профиль: добавление аватарки, редактирование статуса и личных данных, добавление сообщения (локально);
