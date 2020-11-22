@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "00170749d18067a6de150345d6d95ec6",
+    "revision": "d31904eb091830cd3a49c034476b53f2",
     "url": "/dadachat/index.html"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dadachat/static/css/5.829d2d1d.chunk.css"
   },
   {
-    "revision": "28ca5bebff5d9f0661da",
+    "revision": "c1d3b787371ea27455de",
     "url": "/dadachat/static/css/main.c9310753.chunk.css"
   },
   {
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dadachat/static/js/6.1c7c1f60.chunk.js"
   },
   {
-    "revision": "28ca5bebff5d9f0661da",
-    "url": "/dadachat/static/js/main.cdf18eb2.chunk.js"
+    "revision": "c1d3b787371ea27455de",
+    "url": "/dadachat/static/js/main.0cdc1b98.chunk.js"
   },
   {
     "revision": "b4771e030d6bcdb26d1f",

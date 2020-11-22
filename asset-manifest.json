@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dadachat/static/css/main.c9310753.chunk.css",
-    "main.js": "/dadachat/static/js/main.cdf18eb2.chunk.js",
-    "main.js.map": "/dadachat/static/js/main.cdf18eb2.chunk.js.map",
+    "main.js": "/dadachat/static/js/main.0cdc1b98.chunk.js",
+    "main.js.map": "/dadachat/static/js/main.0cdc1b98.chunk.js.map",
     "runtime-main.js": "/dadachat/static/js/runtime-main.0e324eee.js",
     "runtime-main.js.map": "/dadachat/static/js/runtime-main.0e324eee.js.map",
     "static/js/2.c8dc1307.chunk.js": "/dadachat/static/js/2.c8dc1307.chunk.js",
@@ -19,7 +19,7 @@
     "static/js/6.1c7c1f60.chunk.js": "/dadachat/static/js/6.1c7c1f60.chunk.js",
     "static/js/6.1c7c1f60.chunk.js.map": "/dadachat/static/js/6.1c7c1f60.chunk.js.map",
     "index.html": "/dadachat/index.html",
-    "precache-manifest.e6814ae975555ec7ea11c5b1fa051377.js": "/dadachat/precache-manifest.e6814ae975555ec7ea11c5b1fa051377.js",
+    "precache-manifest.dc23b1d6ac71ee981dd342461d9e1f20.js": "/dadachat/precache-manifest.dc23b1d6ac71ee981dd342461d9e1f20.js",
     "service-worker.js": "/dadachat/service-worker.js",
     "static/css/3.659fab35.chunk.css.map": "/dadachat/static/css/3.659fab35.chunk.css.map",
     "static/css/4.c30a5491.chunk.css.map": "/dadachat/static/css/4.c30a5491.chunk.css.map",
@@ -37,6 +37,6 @@
     "static/js/runtime-main.0e324eee.js",
     "static/js/2.c8dc1307.chunk.js",
     "static/css/main.c9310753.chunk.css",
-    "static/js/main.cdf18eb2.chunk.js"
+    "static/js/main.0cdc1b98.chunk.js"
   ]
 }
