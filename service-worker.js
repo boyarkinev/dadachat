@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dadachat/precache-manifest.b4037158eee4300af2b76dd0b76f0a49.js"
+  "/dadachat/precache-manifest.dc23b1d6ac71ee981dd342461d9e1f20.js"
 );
 
 self.addEventListener('message', (event) => {

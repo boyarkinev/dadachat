@@ -1,55 +1,55 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4438a84e7510e9b9f3158ab523774ec4",
+    "revision": "d31904eb091830cd3a49c034476b53f2",
     "url": "/dadachat/index.html"
   },
   {
-    "revision": "6bfe8962f91cf09455ab",
+    "revision": "37871cfb3208aa45f580",
     "url": "/dadachat/static/css/3.659fab35.chunk.css"
   },
   {
-    "revision": "97d26cf6179d4c712d56",
+    "revision": "40b91ecd6181b112c179",
     "url": "/dadachat/static/css/4.c30a5491.chunk.css"
   },
   {
-    "revision": "fbafc9b48edbf38687f4",
+    "revision": "8917ad4472fa4da5fbb2",
     "url": "/dadachat/static/css/5.829d2d1d.chunk.css"
   },
   {
-    "revision": "b8abb9c1629cff8dbd50",
+    "revision": "c1d3b787371ea27455de",
     "url": "/dadachat/static/css/main.c9310753.chunk.css"
   },
   {
-    "revision": "59e30474af96e094dd6d",
-    "url": "/dadachat/static/js/2.27743494.chunk.js"
+    "revision": "aa7ff70489e33641e72d",
+    "url": "/dadachat/static/js/2.c8dc1307.chunk.js"
   },
   {
     "revision": "9b318b6fb13190fe82c0677e9264b3c7",
-    "url": "/dadachat/static/js/2.27743494.chunk.js.LICENSE.txt"
+    "url": "/dadachat/static/js/2.c8dc1307.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6bfe8962f91cf09455ab",
-    "url": "/dadachat/static/js/3.ba57a49b.chunk.js"
+    "revision": "37871cfb3208aa45f580",
+    "url": "/dadachat/static/js/3.e369bc64.chunk.js"
   },
   {
-    "revision": "97d26cf6179d4c712d56",
-    "url": "/dadachat/static/js/4.cee8e802.chunk.js"
+    "revision": "40b91ecd6181b112c179",
+    "url": "/dadachat/static/js/4.af6cba58.chunk.js"
   },
   {
-    "revision": "fbafc9b48edbf38687f4",
-    "url": "/dadachat/static/js/5.1d53400c.chunk.js"
+    "revision": "8917ad4472fa4da5fbb2",
+    "url": "/dadachat/static/js/5.5afb4c23.chunk.js"
   },
   {
-    "revision": "a67a0c24e41e8872e524",
-    "url": "/dadachat/static/js/6.1aa6573b.chunk.js"
+    "revision": "57f924968a69085f3b1a",
+    "url": "/dadachat/static/js/6.1c7c1f60.chunk.js"
   },
   {
-    "revision": "b8abb9c1629cff8dbd50",
-    "url": "/dadachat/static/js/main.b47e9790.chunk.js"
+    "revision": "c1d3b787371ea27455de",
+    "url": "/dadachat/static/js/main.0cdc1b98.chunk.js"
   },
   {
-    "revision": "58ac4863263377682047",
-    "url": "/dadachat/static/js/runtime-main.17a47cee.js"
+    "revision": "b4771e030d6bcdb26d1f",
+    "url": "/dadachat/static/js/runtime-main.0e324eee.js"
   },
   {
     "revision": "cc571328d34ebae014f1783d5372f30d",
